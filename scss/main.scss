@@ -1,6 +1,75 @@
-$primary-color: #444;
+@import 'sub';
+
+*{
+    box-sizing: border-box;
+}
 
 body{
+    @include background;
     background-color: $primary-color;
-    color: #fff;
+    color: whitesmoke;
+    opacity: 1;
+    height: 100%;
+    margin: 0;
+    font-family: 'Special Elite', cursive;
+    line-height: 1.5;
 } 
+
+//Headings
+
+h1, h2, h3{
+    margin: 0;
+    font-weight: 200;
+
+    &.heading{
+        font-size: 4rem;
+    }
+
+    &.sub-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        //wrap the rgba function so the h2 cannot be blocked by the background image
+        background: rgba(lighten($primary-color, 2), 0.5); //0.5 is opacity
+    }
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    //make it always in the front
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-clolor;
+}
+
+main{
+    padding: 4rem;
+    height: 100%;
+
+    .icon{
+        margin-top: 1rem;
+        
+        a {
+            padding: 0.8rem;
+
+            &:hover{
+                color: $secondary-clolor;
+                @include transition();
+            }
+        }
+    }
+
+    &#home{
+        overflow: hidden;
+        h1{
+            margin-top: 20vh;
+        }
+    }
+}
