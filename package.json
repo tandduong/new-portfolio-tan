@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-tan",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o src/css/ --recursive"
+  },
+  "author": "Tan Duong",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
