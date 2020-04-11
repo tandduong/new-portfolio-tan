@@ -1,3 +1,23 @@
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all .3s ease-out; }
+  .menu-button .menu-button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background-color: white;
+    transition: all .3s ease-out; }
+  .menu-button.close .menu-button-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); }
+  .menu-button.close .menu-button-line:nth-child(2) {
+    opacity: 0; }
+  .menu-button.close .menu-button-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px); }
+
 * {
   box-sizing: border-box; }
 
@@ -10,7 +30,7 @@ body {
   font-family: 'Special Elite', cursive;
   line-height: 1.5; }
   body#img {
-    background: url(../img/background.JPG);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#img::after {
