@@ -10,7 +10,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background-color: black;
+        background-color: set-text-color($primary-color);
         opacity: .5;
         @include transition;
     }
@@ -112,6 +112,7 @@
        text-transform: uppercase;
        padding: 20px;
        font-weight: 300;
+       color:set-text-color($primary-color);
        @include transition;
 
        &:hover{

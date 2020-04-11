@@ -1,4 +1,4 @@
-$primary-color: rgb(184, 184, 184);
+$primary-color: rgb(168, 163, 163);
 $secondary-color: rgb(10, 66, 129);
 $show-home-img: true;
 $home-img: url(../img/background.jpg);
@@ -29,6 +29,16 @@ $back-ground-opacity: 0.5;
     }
 }
 
+// Set Text Color
+
+@function set-text-color($color){
+  @if (lightness($color) > 40){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+
 // Media Query Mixins
 @mixin media{
   @media screen and (max-width: 500px){
@@ -49,7 +59,7 @@ $back-ground-opacity: 0.5;
 }
 
 @mixin mediaResizeXL{
-  @media screen and (max-width: 1171px){
+  @media screen and (min-width: 1171px){
     @content;
   }
 }
